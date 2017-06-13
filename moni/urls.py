@@ -14,7 +14,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+from auto import views as auto_view
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url('^$',auto_view.home,name='home'),
+
 ]
